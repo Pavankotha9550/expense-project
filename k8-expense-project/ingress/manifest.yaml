@@ -35,9 +35,9 @@ metadata:
     purpose: ingress
     project: expense
     app: expense
-  # No annotations needed! ✅
+  
 spec:
-  type: LoadBalancer  # <-- This alone creates a Classic LB (default in AWS)
+  type: LoadBalancer  
   selector:
     purpose: ingress
     project: expense
