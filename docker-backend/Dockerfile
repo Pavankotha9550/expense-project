@@ -8,5 +8,5 @@ COPY TransactionService.js /opt/server
 RUN npm install /opt/server
 RUN chown -R expense:expense /opt/server
 ENV DB_HOST="mysql"
-USER roboshop
+USER expense
 CMD ["node","server.js"]
