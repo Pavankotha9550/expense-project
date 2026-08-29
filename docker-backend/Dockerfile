@@ -9,4 +9,4 @@ RUN npm install /opt/server
 RUN chown -R expense:expense /opt/server
 ENV DB_HOST="mysql"
 USER expense
-CMD ["node","server.js"]
+CMD ["node","index.js"]
