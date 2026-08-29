@@ -4,7 +4,7 @@ WORKDIR /opt/server
 COPY DbConfig.js /opt/server
 COPY index.js /opt/server
 COPY package.json /opt/server
-COPY TranscationService.js /opt/server
+COPY TransactionService.js /opt/server
 RUN npm install /opt/server
 RUN chown -R expense:expense /opt/server
 ENV DB_HOST="mysql"
