@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: pavankotha9550/backend:v2
+        image: pavankotha9550/expense-backend:v2
         envFrom:
         - configMapRef:
             name: configmap-backend

@@ -71,7 +71,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: pavankotha9550/mysql:v2
+        image: pavankotha9550/expense-db:v2
         envFrom:
         - secretRef:
             name: secret-mysql
