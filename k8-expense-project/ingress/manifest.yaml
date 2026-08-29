@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: expense
+  namespace: expense
+  labels:
+    purpose: ingress
+    project: expense
+    app: expense
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      purpose: ingress
+      project: expense
+      app: expense
+  template:
+    metadata:
+      labels:
+        purpose: ingress
+        project: expense
+        app: expense
+    spec:
+      containers:
+      - name: expense
+        image: pavankotha9550/expense-frontend:v2
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: expense
+  namespace: expense
+  labels:
+    purpose: ingress
+    project: expense
+    app: expense
+  # No annotations needed! ✅
+spec:
+  type: LoadBalancer  # <-- This alone creates a Classic LB (default in AWS)
+  selector:
+    purpose: ingress
+    project: expense
+    app: expense
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
