@@ -60,7 +60,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-  - host: "expense.daws84s.site"
+  #- host: "expense.daws84s.cyou"
     http:
       paths:
       - pathType: Prefix
