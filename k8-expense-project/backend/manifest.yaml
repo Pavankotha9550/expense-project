@@ -44,11 +44,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: service-backend
+  name: backend
   namespace: expense
   labels:
     name: expense
-    server: service-backend
+    server: backend
     env: dev
 spec:
   selector:
