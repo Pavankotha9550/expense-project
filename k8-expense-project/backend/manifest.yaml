@@ -10,7 +10,6 @@ data:
   # property-like keys; each key maps to a simple value
   DB_HOST: "service-mysql"
   
-
 ---
 
 apiVersion: apps/v1
