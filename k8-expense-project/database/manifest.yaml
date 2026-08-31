@@ -9,7 +9,7 @@ metadata:
 spec:
   clusterIP: None
   selector:
-    name: deployment-mysql
+    purpose: statefulset
     project: expense
   ports:
     - protocol: TCP
@@ -39,7 +39,7 @@ metadata:
 spec:
   #clusterIP: None
   selector:
-    name: deployment-mysql
+    purpose: statefulset
     project: expense
   ports:
     - protocol: TCP
